@@ -1,0 +1,94 @@
+<app-content>
+  <div class="app-title">
+    <div>
+      <h1><i class="fa fa-dashboard"></i> Blank Page</h1>
+      <p>Start a beautiful journey here</p>
+    </div>
+    <ul class="app-breadcrumb breadcrumb">
+      <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
+      <li class="breadcrumb-item"><a href="#">Blank Page</a></li>
+    </ul>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="tile">
+        <div class="tile-body">
+          <div class="tile-title-w-btn">
+            <div class="col-md-4">
+              <div class="input-group">
+                <input type="text" class="form-control"
+                  placeholder="กรอกคำค้น..." [(ngModel)]="searchText"
+                  />
+                <div class="input-group-append">
+                  <button type="submit" class="btn btn-primary"
+                    (click)="searchData()">
+                    <i class="fa fa-search"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="btn-group">
+                <button type="button"
+                  class="btn btn-info" (click)="gotoCreateProductPage()"><i
+                    class="fa fa-plus"></i></button>
+                <button class="btn btn-danger" type="button"><i
+                    class="fa fa-trash-o"></i></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <table class="table table-sm">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>ชื่อสินค้า</th>
+                  <th>หมวดหมู่</th>
+                  <th>ราคาต่อหน่วย</th>
+                  <th>ราคาขาย</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of itemProduct.rs">
+                  <td>{{ item.product_id }}</td>
+                  <td>{{ item.name }}</td>
+                  <td>{{ item.cat_name }}</td>
+                  <td>{{ item.product_cost }}</td>
+                  <td>{{ item.product_price }}</td>
+                  <td>
+                    <i (click)="onUpdateProduct(item.product_id)" class="fa
+                      fa-edit cur"></i>
+                    <span> | </span>
+                    <i (click)="onDeleteData(item.product_id)" class="fa
+                      fa-trash cur"></i>
+                  </td>
+                </tr>
+              </tbody>
+
+            </table>
+
+          </div>
+          <div class="row">
+
+            <div class="col-md-8">
+              จำนวนสมาชิกทั้งหมด xx คน
+            </div>
+            <div class="col-md-4 pull-right">
+              <div>
+                <ul class="pagination pagination-sm">
+                  <li class="page-item disabled"><a class="page-link">«</a></li>
+                  <li class="page-item active"><a class="page-link">1</a></li>
+                  <li class="page-item"><a class="page-link">»</a></li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</app-content>
