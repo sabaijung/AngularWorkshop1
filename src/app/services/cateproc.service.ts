@@ -6,7 +6,7 @@ import { CatProc } from '../models/catproc';
 })
 export class CateprocService {
 
-  baseUrl: string = 'http://localhost/6.API/5.api_ranger/crud_catproc.php?cmd=select';
+  baseUrl: string = 'xxx';
 
   constructor(private http: HttpClient) {
 

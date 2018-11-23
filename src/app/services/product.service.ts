@@ -7,7 +7,7 @@ import { Product } from '../models/product';
 })
 
 export class ProductService {
-  baseUrl: string = 'http://localhost/6.API/5.api_ranger/crud_product.php?';
+  baseUrl: string = 'xxxx';
 
   constructor(private http: HttpClient) { }
 

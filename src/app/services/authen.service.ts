@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class AuthenService {
-  baseUrl: string = 'http://localhost/6.API/5.api_ranger/authen.php?';
+  baseUrl: string = 'xxx';
 
   constructor(private http: HttpClient) { }
 
